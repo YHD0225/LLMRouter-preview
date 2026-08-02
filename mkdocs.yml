@@ -162,6 +162,7 @@ markdown_extensions:
 # Page tree
 nav:
   - Home: index.md
+  - Leaderboard: leaderboard.md
   - Getting started:
       - Installation: getting-started/installation.md
       - Quickstart: getting-started/quickstart.md
@@ -218,7 +219,10 @@ nav:
 
 extra_javascript:
     - "js/runllm-widget.js"
+    - "js/leaderboard.js"
 
+extra_css:
+  - stylesheets/leaderboard.css
 # extra_css:
 #   - stylesheets/llm-search.css
 
