@@ -17,7 +17,10 @@ hide:
 
     <p>That is the routing problem. In practice, a router must account for the request, the available model pool, price, task-specific quality, interaction history, and sometimes user preferences. Existing approaches span binary quality prediction, cost-aware cascades, graph-based ranking, multi-turn policies, and personalization.</p>
 
-    <p>Systematically studying these approaches has been difficult for two reasons. First, routers are released with incompatible interfaces and assumptions, so comparing methods often means comparing entire experimental stacks. Second, routing supervision and evaluation require knowing how every candidate model performs on every query—both in response quality and inference cost.</p>
+    <div class="llmr-article__problems">
+      <article><span>01</span><h3>Fragmented methods</h3><p>Routers are released with incompatible interfaces, supervision, and candidate pools. Comparing two methods can inadvertently mean comparing two entire experimental stacks.</p></article>
+      <article><span>02</span><h3>Incomplete evaluation</h3><p>Training and evaluating a router requires knowing how every candidate responds to every query, including both task quality and the cost of reaching an answer.</p></article>
+    </div>
 
     <section class="llmr-work-closes-gap">
       <div class="llmr-work-closes-gap__mark"><img src="../../assets/logo.png" alt="LLMRouter logo"></div>
@@ -31,22 +34,18 @@ hide:
       </div>
     </section>
 
-    <figure class="llmr-article__figure">
-      <img src="../../assets/llmrouter_.png" alt="Overview of the LLMRouter workflow">
-      <figcaption>LLMRouter shares the workflow from data construction to training, inference, and evaluation.</figcaption>
-    </figure>
-
     <h2>A unified formulation for routing</h2>
 
     <p>LLMRouter treats routing as a sequential decision process: maximize response quality while controlling inference cost. Under this formulation, every router is built from the same five components: a context encoder, a model encoder, a scoring function, a decision rule, and a learning signal.</p>
 
     <p>The formulation does not make all routers identical; it makes their differences explicit. A single-turn router can focus on the current query. A multi-turn or agentic router can incorporate history and intermediate evidence. A personalized router can condition on user signals. These choices become comparable design decisions rather than properties buried inside separate implementations.</p>
 
-    <div class="llmr-routing-flow" role="img" aria-label="The five components of an LLMRouter routing decision">
-      <span>Query, history &amp; user context</span><b>→</b><span>Context encoder</span><b>+</b><span>Model encoder</span><b>→</b><span>Score &amp; decision</span><b>→</b><span>Selected model</span>
-    </div>
-
     <p>The same abstraction organizes three router families: <strong>single-turn</strong> methods route directly from a query; <strong>multi-turn and agentic</strong> methods reason over an evolving interaction state; and <strong>personalized</strong> methods condition decisions on information about the user.</p>
+
+    <figure class="llmr-article__figure llmr-article__figure--framed">
+      <img src="../../assets/blog/unified-routing.png" alt="Unified LLM routing formulation with single-turn, multi-turn, and personalized router families">
+      <figcaption><strong>Unified routing formulation.</strong> The observed state determines which information a router sees; context and model encoders feed a shared routing decision, which can dispatch once or continue over multiple turns.</figcaption>
+    </figure>
 
     <h2>LLMRouter: a reusable library</h2>
 
@@ -64,6 +63,11 @@ class MyRouter(MetaRouter):
 
     <p>The library includes more than 16 representative routers across single-turn, multi-turn, and personalized settings. A unified CLI, OpenAI-compatible serving, and a ComfyUI interface for visual prototyping help carry the same routing logic from a reproducible experiment into a deployed application.</p>
 
+    <figure class="llmr-article__figure llmr-article__figure--framed">
+      <img src="../../assets/blog/library-overview.png" alt="LLMRouter library architecture with data engine, trainer, route engine, evaluation, and deployment">
+      <figcaption><strong>One reusable workflow.</strong> Data collection, router training, route execution, evaluation, and deployment are separate modules that work across router families.</figcaption>
+    </figure>
+
     <h2>Evaluation must include both quality and cost</h2>
 
     <p>Evaluating a router is more demanding than evaluating one model: the system must know how every candidate performs on every query. LLMRouter builds this supervision automatically by running a candidate pool across benchmarks, applying task-specific metrics, and recording token-level cost. The resulting <strong>xRouteBench</strong> spans generic LLM tasks, memory, image and video understanding, time-series, and personalized routing.</p>
@@ -77,6 +81,10 @@ class MyRouter(MetaRouter):
       <div><strong>5</strong><span>quality–cost settings</span></div>
     </div>
 
+    <div class="llmr-track-strip" aria-label="xRouteBench tracks">
+      <span>Generic LLM tasks</span><span>Memory</span><span>Vision &amp; video</span><span>Time-series</span><span>Personalization</span>
+    </div>
+
     <h2>What the study finds</h2>
 
     <div class="llmr-article__findings">
@@ -85,6 +93,23 @@ class MyRouter(MetaRouter):
       <p><strong>Extra rounds are not automatically better.</strong> Multi-turn methods can add redundant information and cost when one well-chosen route already suffices.</p>
       <p><strong>Personalization matters.</strong> Conditioning on user context improves routing quality in preference-oriented settings, while the representation of that context remains consequential.</p>
     </div>
+
+    <section class="llmr-results-gallery">
+      <figure>
+        <img src="../../assets/blog/rank-heatmap.png" alt="Router rankings across cost weights">
+        <figcaption><strong>Rankings move with the budget.</strong> As cost receives more weight, lightweight methods can overtake quality-first leaders.</figcaption>
+      </figure>
+      <figure>
+        <img src="../../assets/blog/perf-vs-price.png" alt="Performance versus cost across LLM routing methods">
+        <figcaption><strong>Routing exposes a frontier.</strong> Higher inference cost often improves quality, but the largest model is not a universally efficient choice.</figcaption>
+      </figure>
+    </section>
+
+    <h2>Beyond offline benchmarks</h2>
+
+    <p>LLMRouter also studies deployment settings where the routing decision is part of a real system rather than a static table. In a Slack deployment, 15 users contributed 40 sessions and 234 pairwise preference records. On held-out sessions, PersonalizedRouter reached <strong>83.05</strong>, showing both the promise of user-conditioned routing and the need to validate simulated results against real feedback.</p>
+
+    <p>The same idea extends to multi-agent systems: each functional node can receive a model selected for its own prompt instead of sharing one base model. Across five coordination topologies, six of seven learned routers surpassed the largest-model baseline on average; MFRouter reached <strong>76.48</strong> versus <strong>71.48</strong> for always selecting the largest model.</p>
 
     <h2>Explore the results</h2>
 
