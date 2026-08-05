@@ -42,7 +42,7 @@ Many routers look different on the surface. A simple nearest-neighbor router, a 
 
 The routing state can include the input query, optional user context, and the interaction history accumulated so far. A router can dispatch the request to one candidate model, or it can terminate and aggregate responses it has already collected. Single-turn routing is the special case where the system dispatches once and then stops.
 
-![Figure 1](images/formulation.png)
+![Figure 1](../assets/blog/unified-routing.png)
 
 *Figure 1. Unified formulation of LLM routing. Single-turn, multi-turn, and personalized routers differ primarily in which parts of the routing state they observe and how they make the next decision.*
 
@@ -68,7 +68,7 @@ This view also makes the quality–cost trade-off explicit. The routing policy s
 
 Once routers share a common formulation, they can share the infrastructure around them. LLMRouter turns that idea into a library organized around a common query–model matrix: a record of how candidate models respond to benchmark queries, how those responses are scored, and what they cost.
 
-![Figure 3](images/library-architecture.png)
+![Figure 3](../assets/blog/library-overview.png)
 
 *Figure 3. LLMRouter architecture. The data engine, router trainer, route engine, evaluation module, and deployment layer are reusable across router families.*
 
@@ -96,7 +96,7 @@ That requirement becomes especially important outside short, text-only requests.
 
 xRouteBench is designed around these differences. It uses an automated pipeline to construct routing supervision by running a candidate pool over benchmark queries, scoring each response with the appropriate task metric, and recording token-level inference cost. Every router is then evaluated under the same protocol.
 
-![Figure 2](images/xroutebench.png)
+![Figure 2](../assets/blog/xroutebench.png)
 
 *Figure 2. xRouteBench task statistics. The benchmark covers five routing tracks and eight test sets under one quality–cost evaluation protocol.*
 
@@ -122,7 +122,7 @@ Because xRouteBench uses one query schema, supervision format, and evaluation pr
 
 The library is designed so that extending it does not require forking the system. A new router implements routing logic, and a trainer supplies the learning signal when training is needed. The rest of the workflow—data construction, training execution, route dispatch, evaluation, and deployment—stays shared.
 
-![Figure 4](images/router-interface.png)
+![Figure 4](../assets/blog/router-interface.png)
 
 *Figure 4. The five routing components map onto a router class and a trainer class. The router implements the state-to-action decision; the trainer defines the learning signal.*
 
@@ -179,7 +179,7 @@ Router rankings change across tasks. RouterDC leads the generic LLM task track i
 
 The rankings also change as the cost weight increases.
 
-![Figure 5](images/cost-ranking.png)
+![Figure 5](../assets/blog/rank-heatmap.png)
 
 *Figure 5. Router ranking across quality–cost settings. Increasing the cost weight can reverse the ordering of routers within the same task category.*
 
@@ -205,7 +205,7 @@ On the persona-conditioned personalized track, GMTRouter reaches 68.78, ahead of
 
 ### Quality and cost form a frontier
 
-![Figure 6](images/performance-cost.png)
+![Figure 6](../assets/blog/perf-vs-price.png)
 
 *Figure 6. Performance versus per-query cost, averaged across xRouteBench tasks. Higher cost often improves performance, but the largest fixed model is not a universally efficient choice.*
 
@@ -223,7 +223,7 @@ In the Slack setting, 15 users contributed 40 sessions with one to twelve turns,
 
 Multi-agent systems provide another setting where routing is naturally granular. Rather than assigning one base model to every agent, LLMRouter treats model choice as a per-agent decision. Planning, execution, verification, and summarization prompts can have very different requirements, even inside the same workflow.
 
-![Figure 7](images/multi-agent-topologies.png)
+![Figure 7](../assets/blog/multi-agent-topologies.png)
 
 *Figure 7. Multi-agent coordination topologies used to evaluate per-agent routing: Star, Tree, Graph, Chain, and Plan-Exec-Sum.*
 
