@@ -124,10 +124,6 @@ Because xRouteBench uses one query schema, supervision format, and evaluation pr
 
 The library is designed so that extending it does not require forking the system. A new router implements routing logic, and a trainer supplies the learning signal when training is needed. The rest of the workflow—data construction, training execution, route dispatch, evaluation, and deployment—stays shared.
 
-![Figure 4](../assets/blog/router-interface.png)
-
-*Figure 4. The five routing components map onto a router class and a trainer class. The router implements the state-to-action decision; the trainer defines the learning signal.*
-
 ```python
 from llmrouter.models.meta_router import MetaRouter
 
