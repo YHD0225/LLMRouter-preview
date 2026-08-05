@@ -13,13 +13,12 @@ hide:
       <p class="tsr-authors">Tao Feng &nbsp;&nbsp; Haozhen Zhang &nbsp;&nbsp; Zijie Lei &nbsp;&nbsp; Haodong Yue &nbsp;&nbsp; Chongshan Lin &nbsp;&nbsp; Jiaxuan You</p>
       <p class="tsr-affiliations">University of Illinois Urbana-Champaign &nbsp;·&nbsp; University of Maryland, College Park &nbsp;·&nbsp; Tsinghua University</p>
       <div class="tsr-links" aria-label="Project resources">
+        <a href="#paper" aria-label="Paper link coming soon"><span aria-hidden="true">▤</span> Paper</a>
         <a href="https://github.com/ulab-uiuc/LLMRouter" target="_blank" rel="noopener"><span aria-hidden="true">⌘</span> Code</a>
-        <a href="leaderboard/"><span aria-hidden="true">▤</span> Leaderboard</a>
-        <a href="getting-started/installation/">Getting started</a>
-        <a href="learn/">Learn LLMRouter</a>
-        <a href="tutorials/">Tutorials</a>
-        <a href="api/">API Reference</a>
+        <a href="https://huggingface.co/datasets/ulab-ai/xRouteBench" target="_blank" rel="noopener"><span aria-hidden="true">🤗</span> Hugging Face</a>
         <a href="blog/">Blog</a>
+        <a href="leaderboard/"><span aria-hidden="true">▤</span> Leaderboard</a>
+        <a href="tutorials/">Tutorials</a>
       </div>
     </div>
   </section>
