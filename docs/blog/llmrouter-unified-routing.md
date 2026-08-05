@@ -14,7 +14,9 @@ tags:
 
 # LLMRouter: a common foundation for choosing the right LLM
 
-Modern LLM applications rarely need a single model. They need a way to decide which model should handle each request.
+<p class="llmr-blog__subtitle">A unified library, benchmark, and analysis framework for LLM routing.</p>
+
+<p class="llmr-blog__intro">Modern LLM applications rarely need a single model. They need a way to decide which model should handle each request.</p>
 
 ## Why LLM Routing Matters
 
