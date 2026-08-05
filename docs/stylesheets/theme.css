@@ -123,10 +123,10 @@ body:has(.tsr-home) .md-grid { max-width: none; }
 .tsr-hero__inner, .tsr-container { width: 80%; max-width: 1180px; }
 .tsr-mark { width: 5.3rem; height: 5.3rem; margin-bottom: .9rem; border: 0; border-radius: 0; box-shadow: none; }
 .tsr-mark img { width: 5.2rem; }
-.md-typeset .tsr-hero h1 { color: var(--tsr-accent); font-size: clamp(3rem, 6.2vw, 4.55rem); font-weight: 700; letter-spacing: -.045em; }
-.tsr-hero__title { max-width: 60rem; margin: .58rem auto 1.2rem; color: var(--tsr-ink); font-size: clamp(1.25rem, 2.25vw, 1.8rem); font-weight: 600; letter-spacing: -.02em; }
-.tsr-authors { max-width: 65rem; margin: .25rem auto; color: #2f3640; font-size: .91rem; }
-.tsr-affiliations { margin-top: .42rem; color: #69707c; font-size: .79rem; }
+.md-typeset .tsr-hero h1 { color: var(--tsr-accent); font-size: 2rem; font-weight: 700; letter-spacing: -.035em; }
+.tsr-hero__title { max-width: 60rem; margin: .58rem auto 1.2rem; color: var(--tsr-ink); font-size: .95rem; font-weight: 600; letter-spacing: -.015em; line-height: 1.55; }
+.tsr-authors { max-width: 65rem; margin: .25rem auto; color: #2f3640; font-size: .78rem; }
+.tsr-affiliations { margin-top: .42rem; color: #69707c; font-size: .72rem; }
 .tsr-links { gap: .5rem; margin-top: 1.6rem; }
 .tsr-links a { min-height: 2.2rem; padding: .42rem .82rem; font-size: .73rem; font-weight: 600; background: #4a4a4a; border: 1px solid #4a4a4a; border-radius: .3rem; }
 .tsr-links a:hover { background: #303030; border-color: #303030; transform: none; }
@@ -136,8 +136,8 @@ body:has(.tsr-home) .md-grid { max-width: none; }
 .tsr-section { padding: 3rem 1.5rem; border: 0; }
 .tsr-section:nth-of-type(odd), .tsr-framework, .tsr-findings { background: #fff !important; }
 .tsr-overview, .tsr-benchmark, .tsr-cite { background: var(--tsr-soft) !important; }
-.md-typeset .tsr-section h2 { margin-bottom: 1.15rem; color: #303030; font-size: clamp(1.75rem, 3vw, 2.3rem); font-weight: 600; letter-spacing: -.025em; }
-.tsr-prose { max-width: 100%; color: #333; font-size: 1.05rem; line-height: 1.68; text-align: left; }
+.md-typeset .tsr-section h2 { margin-bottom: 1.15rem; color: #303030; font-size: 1.375rem; font-weight: 600; letter-spacing: -.02em; }
+.tsr-prose { max-width: 100%; color: #333; font-size: .94rem; line-height: 1.62; text-align: left; }
 .tsr-prose p { color: inherit; }.tsr-prose strong { color: inherit; }
 .tsr-figure { max-width: 100%; padding: 0; margin-top: 2rem; background: transparent; border: 0; border-radius: 0; }
 .tsr-figure figcaption { max-width: 70rem; margin: .65rem auto 0; color: #6b7280; font-size: .76rem; }
@@ -149,7 +149,7 @@ body:has(.tsr-home) .md-grid { max-width: none; }
 .tsr-inline-link { color: var(--tsr-accent) !important; font-size: .82rem; font-weight: 600; }
 .tsr-finding-list { display: block; max-width: 100%; margin: 0 auto; border-top: 1px solid var(--tsr-border); }.tsr-finding-list p { min-height: auto; padding: 1.15rem 0; margin: 0; color: var(--tsr-copy); font-size: .92rem; line-height: 1.65; background: transparent; border: 0; border-bottom: 1px solid var(--tsr-border); border-radius: 0; }.tsr-finding-list strong { display: inline; margin: 0; color: #303030; }
 .tsr-cite pre { max-width: 100%; padding: 1.1rem 1.2rem; background: #fff; border: 0; border-radius: 0; }.tsr-cite code { font-size: .76rem; }
-@media screen and (max-width: 44.9844em) { body:has(.tsr-home) .md-content__inner { padding: 0; }.tsr-hero { padding: 2.8rem 1rem 2.2rem; }.tsr-hero__inner, .tsr-container { width: 90%; }.tsr-sub-links { gap: .25rem .65rem; }.tsr-section { padding: 2.35rem 1rem; }.tsr-prose { font-size: .96rem; }.tsr-steps { grid-template-columns: 1fr; }.tsr-steps article { min-height: auto; border-right: 0; border-bottom: 1px solid var(--tsr-border); }.tsr-steps article:last-child { border-bottom: 0; } }
+@media screen and (max-width: 44.9844em) { body:has(.tsr-home) .md-content__inner { padding: 0; }.tsr-hero { padding: 2.8rem 1rem 2.2rem; }.tsr-hero__inner, .tsr-container { width: 90%; }.tsr-sub-links { gap: .25rem .65rem; }.tsr-section { padding: 2.35rem 1rem; }.tsr-prose { font-size: .94rem; }.tsr-steps { grid-template-columns: 1fr; }.tsr-steps article { min-height: auto; border-right: 0; border-bottom: 1px solid var(--tsr-border); }.tsr-steps article:last-child { border-bottom: 0; } }
 
 /* The six public project links belong only to Blog, Leaderboard, and Tutorials.
    Other documentation pages remain distraction-free while the site logo still
