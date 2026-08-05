@@ -110,6 +110,8 @@ The benchmark spans five settings:
 
 Across these settings, xRouteBench contains eight test sets and 4,767 instances. The evaluation uses 18 open-weight candidate models served through two providers, ranging from 7B to 671B parameters.
 
+--8<-- "docs/blog/experiment-tables.md:1:18"
+
 The key design choice is that quality and cost are evaluated together. Routers are scored with a weighted objective that trades off task performance against inference cost. The benchmark sweeps five settings, from a quality-only operating point to one that heavily emphasizes cost.
 
 > **Key insight**
@@ -165,6 +167,8 @@ The interface also supports personalization and component ablations. Changing th
 
 The study evaluates more than 16 router implementations across the xRouteBench tracks. The goal is not to name one universal winner. It is to understand what changes when the task, budget, interaction structure, and user context change.
 
+--8<-- "docs/blog/experiment-tables.md:19:44"
+
 ### Learned routers create headroom over a fixed model
 
 Learned routing improves by **14.6% relative** over the strongest fixed-model baseline in the study.
@@ -203,6 +207,8 @@ Routers built for personalization perform best on the human-preference-oriented 
 
 On the persona-conditioned personalized track, GMTRouter reaches 68.78, ahead of the best user-agnostic router, EloRouter, at 66.40. The result illustrates a broader point: user context changes what counts as a good answer, so it can also change which model is the right choice.
 
+--8<-- "docs/blog/experiment-tables.md:45:60"
+
 ### Quality and cost form a frontier
 
 ![Figure 6](../assets/blog/perf-vs-price.png)
@@ -221,6 +227,8 @@ The deployment experiments cover both real-user routing and multi-agent systems.
 
 In the Slack setting, 15 users contributed 40 sessions with one to twelve turns, producing 234 pairwise preference records. For each query, answers from two sampled models were presented in randomized order, and users selected a preferred answer or declared a tie. On held-out sessions, PersonalizedRouter reached 83.05. The result also shows why real feedback matters: the ranking under simulated persona evaluation did not fully transfer to live users.
 
+--8<-- "docs/blog/experiment-tables.md:61:76"
+
 Multi-agent systems provide another setting where routing is naturally granular. Rather than assigning one base model to every agent, LLMRouter treats model choice as a per-agent decision. Planning, execution, verification, and summarization prompts can have very different requirements, even inside the same workflow.
 
 ![Figure 7](../assets/blog/multi-agent-topologies.png)
@@ -228,6 +236,8 @@ Multi-agent systems provide another setting where routing is naturally granular.
 *Figure 7. Multi-agent coordination topologies used to evaluate per-agent routing: Star, Tree, Graph, Chain, and Plan-Exec-Sum.*
 
 Across five coordination topologies, the best router, MFRouter, achieved an average score of 76.48 compared with 71.48 for always selecting the largest model. Routing every node therefore improved over the largest-model baseline across all five topologies in the experiment.
+
+--8<-- "docs/blog/experiment-tables.md:77:"
 
 > **Key insight**
 >
