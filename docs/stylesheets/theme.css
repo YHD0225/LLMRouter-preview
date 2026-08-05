@@ -111,6 +111,7 @@ body:has(.home-action-nav) .md-tabs { display: none; }
    treatment. These are scoped to this page so the existing documentation and
    the maintained leaderboard keep their own layout. */
 body:has(.tsr-home), body:has(.tsr-home) .md-main { background: #fff; }
+body:has(.tsr-home) .md-header, body:has(.tsr-home) .md-tabs, body:has(.tsr-home) .md-footer { display: none; }
 body:has(.tsr-home) .md-main__inner { display: block; max-width: none; margin: 0; }
 body:has(.tsr-home) .md-content { width: 100%; background: #fff; border: 0; border-radius: 0; box-shadow: none; }
 body:has(.tsr-home) .md-content__inner { max-width: none; padding: 0; }

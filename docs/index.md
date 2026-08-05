@@ -11,21 +11,14 @@ hide:
       <h1><span class="tsr-wordmark">LLMRouter</span></h1>
       <p class="tsr-hero__title">A Unified Library, Evaluation, and Analysis for LLM Routing</p>
       <p class="tsr-authors">Tao Feng &nbsp;&nbsp; Haozhen Zhang &nbsp;&nbsp; Zijie Lei &nbsp;&nbsp; Haodong Yue &nbsp;&nbsp; Chongshan Lin &nbsp;&nbsp; Jiaxuan You</p>
-      <p class="tsr-affiliations">University of Illinois Urbana-Champaign &nbsp;·&nbsp; University of Maryland, College Park</p>
+      <p class="tsr-affiliations">University of Illinois Urbana-Champaign &nbsp;·&nbsp; University of Maryland, College Park &nbsp;·&nbsp; Tsinghua University</p>
       <div class="tsr-links" aria-label="Project resources">
         <a href="https://github.com/ulab-uiuc/LLMRouter" target="_blank" rel="noopener"><span aria-hidden="true">⌘</span> Code</a>
         <a href="leaderboard/"><span aria-hidden="true">▤</span> Leaderboard</a>
-        <a href="https://pypi.org/project/llmrouter/" target="_blank" rel="noopener"><span aria-hidden="true">◈</span> PyPI</a>
-        <a href="https://join.slack.com/t/llmrouteropen-ri04588/shared_invite/zt-3jz3cc6d1-ncwKEHvvWe0OczHx7K5c0g" target="_blank" rel="noopener"><span aria-hidden="true">#</span> Slack</a>
-      </div>
-      <div class="tsr-sub-links" aria-label="Documentation and community links">
         <a href="getting-started/installation/">Getting started</a>
         <a href="learn/">Learn LLMRouter</a>
         <a href="tutorials/">Tutorials</a>
         <a href="api/">API Reference</a>
-        <a href="https://www.python.org/downloads/release/python-3109/" target="_blank" rel="noopener">Python ≥ 3.10</a>
-        <a href="https://github.com/ulab-uiuc/LLMRouter/pulls" target="_blank" rel="noopener">PRs welcome</a>
-        <a href="https://github.com/ulab-uiuc/LLMRouter/blob/main/LICENSE" target="_blank" rel="noopener">MIT License</a>
       </div>
     </div>
   </section>
