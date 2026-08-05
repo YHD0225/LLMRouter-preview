@@ -20,7 +20,7 @@
 
 # Project information
 site_name: LLMRouter
-site_url: https://ulab-uiuc.github.io/LLMRouter/
+site_url: https://yhd0225.github.io/LLMRouter-preview/
 site_author: LLMRouter contributors
 site_description: >-
   LLMRouter is an open-source library for LLM routing: train routers, run inference,
