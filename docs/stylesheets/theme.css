@@ -118,9 +118,9 @@ body:has(.tsr-home) .md-content__inner { max-width: none; padding: 0; }
 body:has(.tsr-home) .md-content__button, body:has(.tsr-home) .md-sidebar { display: none; }
 body:has(.tsr-home) .md-grid { max-width: none; }
 
-.tsr-home { --tsr-ink: #1f2937; --tsr-copy: #374151; --tsr-accent: #4a5d7a; --tsr-soft: #f7f7f7; --tsr-border: #dedede; --tsr-font-display: clamp(2.5rem, 6vw, 4.25rem); --tsr-font-subtitle: 1.22rem; --tsr-font-h2: 2rem; --tsr-font-h3: 1.2rem; --tsr-font-body: .94rem; --tsr-font-small: .84rem; --tsr-font-meta: .9rem; --tsr-line-heading: 1.08; --tsr-line-body: 1.7; --tsr-line-small: 1.55; max-width: 1600px; margin: 0 auto; }
+.tsr-home { --tsr-ink: #1f2937; --tsr-copy: #374151; --tsr-accent: #4a5d7a; --tsr-soft: #f7f7f7; --tsr-border: #dedede; --tsr-font-display: clamp(2.5rem, 6vw, 4.25rem); --tsr-font-subtitle: 1.22rem; --tsr-font-h2: 2rem; --tsr-font-h3: 1.2rem; --tsr-font-body: .875rem; --tsr-font-small: .84rem; --tsr-font-meta: .9rem; --tsr-line-heading: 1.08; --tsr-line-body: 1.7; --tsr-line-small: 1.55; max-width: 1600px; margin: 0 auto; }
 .tsr-hero { padding: 4.2rem 1.5rem 3.1rem; background: #fff; border-bottom: 0; }
-.tsr-hero__inner, .tsr-container { width: 80%; max-width: 1180px; }
+.tsr-hero__inner, .tsr-container { width: 76%; max-width: 1100px; }
 .tsr-mark { width: 5.3rem; height: 5.3rem; margin-bottom: .9rem; border: 0; border-radius: 0; box-shadow: none; }
 .tsr-mark img { width: 5.2rem; }
 .md-typeset .tsr-hero h1 { color: var(--tsr-accent); font-size: var(--tsr-font-display); font-weight: 800; letter-spacing: 0; line-height: var(--tsr-line-heading); }
@@ -133,7 +133,7 @@ body:has(.tsr-home) .md-grid { max-width: none; }
 .tsr-sub-links { display: flex; flex-wrap: wrap; justify-content: center; gap: .15rem .8rem; max-width: 64rem; margin: 1rem auto 0; }
 .tsr-sub-links a { color: var(--tsr-accent) !important; font-size: .73rem; font-weight: 600; text-decoration: none; }
 .tsr-sub-links a:hover { color: #2d3e58 !important; text-decoration: underline; }
-.tsr-section { padding: 3rem 1.5rem; border: 0; }
+.tsr-section { padding: 3rem 2rem; border: 0; }
 .tsr-section:nth-of-type(odd), .tsr-framework, .tsr-findings { background: #fff !important; }
 .tsr-overview, .tsr-benchmark, .tsr-cite { background: var(--tsr-soft) !important; }
 .md-typeset .tsr-section h2 { margin-bottom: .75rem; color: #303030; font-size: var(--tsr-font-h2); font-weight: 700; letter-spacing: 0; line-height: 1.14; }
