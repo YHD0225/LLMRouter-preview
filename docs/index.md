@@ -10,13 +10,22 @@ hide:
       <div class="tsr-mark"><img src="assets/logo.png" alt="LLMRouter logo"></div>
       <h1><span class="tsr-wordmark">LLMRouter</span></h1>
       <p class="tsr-hero__title">A Unified Library, Evaluation, and Analysis for LLM Routing</p>
-      <p class="tsr-authors">Tao Feng · Haozhen Zhang · Zijie Lei · Haodong Yue · Chongshan Lin · Jiaxuan You</p>
-      <p class="tsr-affiliations">University of Illinois Urbana-Champaign · University of Maryland, College Park</p>
+      <p class="tsr-authors">Tao Feng &nbsp;&nbsp; Haozhen Zhang &nbsp;&nbsp; Zijie Lei &nbsp;&nbsp; Haodong Yue &nbsp;&nbsp; Chongshan Lin &nbsp;&nbsp; Jiaxuan You</p>
+      <p class="tsr-affiliations">University of Illinois Urbana-Champaign &nbsp;·&nbsp; University of Maryland, College Park</p>
       <div class="tsr-links" aria-label="Project resources">
         <a href="https://github.com/ulab-uiuc/LLMRouter" target="_blank" rel="noopener"><span aria-hidden="true">⌘</span> Code</a>
-        <a href="https://pypi.org/project/llmrouter/"><span aria-hidden="true">◈</span> PyPI</a>
         <a href="leaderboard/"><span aria-hidden="true">▤</span> Leaderboard</a>
+        <a href="https://pypi.org/project/llmrouter/" target="_blank" rel="noopener"><span aria-hidden="true">◈</span> PyPI</a>
         <a href="https://join.slack.com/t/llmrouteropen-ri04588/shared_invite/zt-3jz3cc6d1-ncwKEHvvWe0OczHx7K5c0g" target="_blank" rel="noopener"><span aria-hidden="true">#</span> Slack</a>
+      </div>
+      <div class="tsr-sub-links" aria-label="Documentation and community links">
+        <a href="getting-started/installation/">Getting started</a>
+        <a href="learn/">Learn LLMRouter</a>
+        <a href="tutorials/">Tutorials</a>
+        <a href="api/">API Reference</a>
+        <a href="https://www.python.org/downloads/release/python-3109/" target="_blank" rel="noopener">Python ≥ 3.10</a>
+        <a href="https://github.com/ulab-uiuc/LLMRouter/pulls" target="_blank" rel="noopener">PRs welcome</a>
+        <a href="https://github.com/ulab-uiuc/LLMRouter/blob/main/LICENSE" target="_blank" rel="noopener">MIT License</a>
       </div>
     </div>
   </section>
@@ -39,12 +48,11 @@ hide:
     <div class="tsr-container">
       <h2>A Unified Routing Formulation</h2>
       <p class="tsr-lede">Every router is represented as a sequential decision process. A shared formulation turns different routing ideas into comparable design choices.</p>
-      <div class="tsr-cards">
-        <article><b>01</b><h3>Routing state</h3><p>Encode the query, optional user context, interaction history, and candidate-model information.</p></article>
-        <article><b>02</b><h3>Score &amp; decide</h3><p>Estimate candidate compatibility, then dispatch, escalate, or stop according to the operating budget.</p></article>
-        <article><b>03</b><h3>Learn &amp; evaluate</h3><p>Optimize a learning signal that balances task-specific response quality against inference cost.</p></article>
+      <div class="tsr-steps">
+        <article><b>01</b><h3>Describe the state</h3><p>Represent the query, user context, interaction history, and candidate-model information.</p></article>
+        <article><b>02</b><h3>Make a routing decision</h3><p>Score candidate compatibility, then dispatch, escalate, or stop under the operating budget.</p></article>
+        <article><b>03</b><h3>Learn and evaluate</h3><p>Optimize task quality and inference cost with a common protocol across routing settings.</p></article>
       </div>
-      <div class="tsr-family-line"><span>Single-turn</span><i></i><span>Multi-turn &amp; agentic</span><i></i><span>Personalized</span></div>
     </div>
   </section>
 
@@ -55,9 +63,7 @@ hide:
         <p>LLMRouter constructs routing supervision by running a candidate pool across benchmarks, scoring each response with its task metric, and recording token-level cost. Every router then faces the same queries, models, metrics, and quality–cost protocol.</p>
         <p>The resulting benchmark spans generic LLM tasks, memory-augmented reasoning, image and video understanding, time-series, and personalized routing. This makes it possible to compare both performance and cost instead of optimizing one in isolation.</p>
       </div>
-      <div class="tsr-track-grid">
-        <span>Generic LLM tasks</span><span>Memory</span><span>Vision &amp; video</span><span>Time-series</span><span>Personalization</span>
-      </div>
+      <p class="tsr-track-line"><strong>Tracks:</strong> Generic LLM tasks · Memory · Vision &amp; video · Time-series · Personalization</p>
       <p class="tsr-center"><a class="tsr-inline-link" href="leaderboard/">Explore xRouteBench results →</a></p>
     </div>
   </section>
@@ -67,8 +73,8 @@ hide:
       <h2>Key Findings</h2>
       <div class="tsr-finding-list">
         <p><strong>Learned routing improves over fixed-model baselines.</strong> The empirical study finds a 14.6% relative improvement over the strongest fixed-model baseline.</p>
-        <p><strong>No router dominates every deployment.</strong> Rankings change across tasks and reverse as cost constraints become tighter, making the operating point a first-class decision.</p>
-        <p><strong>User context changes the right answer.</strong> Personalized routing delivers consistent gains when preference and interaction history are available.</p>
+        <p><strong>No router dominates every deployment.</strong> Rankings change across tasks and reverse as cost constraints become tighter.</p>
+        <p><strong>User context changes the right answer.</strong> Personalized routing gains from preference and interaction history when it is available.</p>
       </div>
     </div>
   </section>
