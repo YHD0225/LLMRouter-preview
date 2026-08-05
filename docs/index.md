@@ -19,6 +19,7 @@ hide:
         <a href="learn/">Learn LLMRouter</a>
         <a href="tutorials/">Tutorials</a>
         <a href="api/">API Reference</a>
+        <a href="blog/">Blog</a>
       </div>
     </div>
   </section>
