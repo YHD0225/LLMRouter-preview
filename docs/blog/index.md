@@ -9,6 +9,8 @@ tags:
   - LLM Systems
   - AI Agents
   - Multi-Agent Systems
+hide:
+  - navigation
 ---
 
 --8<-- "docs/blog/llmrouter-unified-routing.md:15:"
