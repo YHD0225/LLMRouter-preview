@@ -164,6 +164,7 @@ nav:
 extra_javascript:
     - "js/runllm-widget.js"
     - "js/leaderboard.js"
+    - "js/navigation-visibility.js"
 
 extra_css:
   - stylesheets/theme.css
