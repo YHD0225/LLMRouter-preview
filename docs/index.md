@@ -7,8 +7,10 @@ hide:
 <div class="tsr-home">
   <section class="tsr-hero">
     <div class="tsr-hero__inner">
-      <div class="tsr-mark"><img src="assets/logo.png" alt="LLMRouter logo"></div>
-      <h1><span class="tsr-wordmark">LLMRouter</span></h1>
+      <div class="tsr-hero__brand">
+        <div class="tsr-mark"><img src="assets/logo.png" alt="LLMRouter logo"></div>
+        <h1><span class="tsr-wordmark">LLMRouter</span></h1>
+      </div>
       <p class="tsr-hero__title">A Unified Library, Evaluation, and Analysis for LLM Routing</p>
       <p class="tsr-authors">Tao Feng &nbsp;&nbsp; Haozhen Zhang &nbsp;&nbsp; Zijie Lei &nbsp;&nbsp; Haodong Yue &nbsp;&nbsp; Chongshan Lin &nbsp;&nbsp; Jiaxuan You</p>
       <p class="tsr-affiliations">University of Illinois Urbana-Champaign &nbsp;·&nbsp; University of Maryland, College Park &nbsp;·&nbsp; Tsinghua University</p>

@@ -121,7 +121,8 @@ body:has(.tsr-home) .md-grid { max-width: none; }
 .tsr-home { --tsr-ink: #1f2937; --tsr-copy: #374151; --tsr-accent: #4a5d7a; --tsr-soft: #f7f7f7; --tsr-border: #dedede; --tsr-font-display: clamp(2.5rem, 6vw, 4.25rem); --tsr-font-subtitle: 1.22rem; --tsr-font-h2: 2rem; --tsr-font-h3: 1.2rem; --tsr-font-body: .875rem; --tsr-font-small: .84rem; --tsr-font-meta: .9rem; --tsr-line-heading: 1.08; --tsr-line-body: 1.7; --tsr-line-small: 1.55; max-width: 1600px; margin: 0 auto; }
 .tsr-hero { padding: 4.2rem 1.5rem 3.1rem; background: #fff; border-bottom: 0; }
 .tsr-hero__inner, .tsr-container { width: 76%; max-width: 1100px; }
-.tsr-mark { width: 5.3rem; height: 5.3rem; margin-bottom: .9rem; border: 0; border-radius: 0; box-shadow: none; }
+.tsr-hero__brand { display: flex; align-items: center; justify-content: center; gap: 1.1rem; margin: 0 auto; }
+.tsr-mark { width: 5.3rem; height: 5.3rem; margin: 0; border: 0; border-radius: 0; box-shadow: none; }
 .tsr-mark img { width: 5.2rem; }
 .md-typeset .tsr-hero h1 { color: var(--tsr-accent); font-size: var(--tsr-font-display); font-weight: 800; letter-spacing: 0; line-height: var(--tsr-line-heading); }
 .tsr-hero__title { max-width: 45rem; margin: .58rem auto 1.2rem; color: var(--tsr-ink); font-size: var(--tsr-font-subtitle); font-weight: 400; letter-spacing: 0; line-height: var(--tsr-line-body); }
@@ -149,7 +150,7 @@ body:has(.tsr-home) .md-grid { max-width: none; }
 .tsr-inline-link { color: var(--tsr-accent) !important; font-size: .82rem; font-weight: 600; }
 .tsr-finding-list { display: block; max-width: 100%; margin: 0 auto; border-top: 1px solid var(--tsr-border); }.tsr-finding-list p { min-height: auto; padding: 1.15rem 0; margin: 0; color: var(--tsr-copy); font-size: .9rem; line-height: var(--tsr-line-small); background: transparent; border: 0; border-bottom: 1px solid var(--tsr-border); border-radius: 0; }.tsr-finding-list strong { display: inline; margin: 0; color: #303030; }
 .tsr-cite pre { max-width: 100%; padding: 1.1rem 1.2rem; background: #fff; border: 0; border-radius: 0; }.tsr-cite code { font-size: .9rem; }
-@media screen and (max-width: 48em) { body:has(.tsr-home) .md-content__inner { padding: 0; }.tsr-hero { padding: 2.8rem 1rem 2.2rem; }.tsr-hero__inner, .tsr-container { width: 90%; }.tsr-sub-links { gap: .25rem .65rem; }.tsr-section { padding: 2.35rem 1rem; }.tsr-home { --tsr-font-display: 2.45rem; }.tsr-steps { grid-template-columns: 1fr; }.tsr-steps article { min-height: auto; border-right: 0; border-bottom: 1px solid var(--tsr-border); }.tsr-steps article:last-child { border-bottom: 0; } }
+@media screen and (max-width: 48em) { body:has(.tsr-home) .md-content__inner { padding: 0; }.tsr-hero { padding: 2.8rem 1rem 2.2rem; }.tsr-hero__inner, .tsr-container { width: 90%; }.tsr-hero__brand { gap: .7rem; }.tsr-mark { width: 3rem; height: 3rem; }.tsr-mark img { width: 2.9rem; }.tsr-sub-links { gap: .25rem .65rem; }.tsr-section { padding: 2.35rem 1rem; }.tsr-home { --tsr-font-display: 2.45rem; }.tsr-steps { grid-template-columns: 1fr; }.tsr-steps article { min-height: auto; border-right: 0; border-bottom: 1px solid var(--tsr-border); }.tsr-steps article:last-child { border-bottom: 0; } }
 
 /* The six public project links belong only to Blog, Leaderboard, and Tutorials.
    Other documentation pages remain distraction-free while the site logo still
